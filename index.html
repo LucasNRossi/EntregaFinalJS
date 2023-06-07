@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ro Burguer</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--HEADER-->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="/imagenes/logo-hamburguesa.png" alt="Logo">
+                </div>
+                <h1>Pedido de Hamburguesas</h1>
+            </div>
+        </header>
+        <!--MAIN-->
+        <main>
+            <div class="productos-precios">
+                <h2>Productos y Precios</h2>
+                <ul>
+                    <li>Pan - $75.00</li>
+                    <li>Hamburguesa - $80.00</li>
+                    <li>Lechuga - $40.00</li>
+                    <li>Tomate - $60.00</li>
+                    <li>Queso - $70.00</li>
+                    <li>Panceta - $90.00</li>
+                    <li>Combo 1 (Hamburguesa + Papas + Gaseosa) - $480.00</li>
+                    <li>Combo 2 (Hamburguesa Doble + Papas + Gaseosa) - $560.00</li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="main-left">
+                    <h2 id="crea-hamburguesa-title">Crea tu hamburguesa</h2>
+                    <div class="column">
+                        <div>
+                            <label for="cantidad-pan">Pan:</label>
+                            <input type="number" id="cantidad-pan" min="0" value="0">
+                        </div>
+                        <div>
+                            <label for="cantidad-hamburguesas">Hamburguesas:</label>
+                            <input type="number" id="cantidad-hamburguesas" min="0" value="0">
+                        </div>
+                        <div>
+                            <label for="cantidad-lechuga">Lechuga:</label>
+                            <input type="number" id="cantidad-lechuga" min="0" value="0">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div>
+                            <label for="cantidad-tomate">Tomate:</label>
+                            <input type="number" id="cantidad-tomate" min="0" value="0">
+                        </div>
+                        <div>
+                            <label   label for="cantidad-queso">Queso:</label>
+                            <input type="number" id="cantidad-queso" min="0" value="0">
+                        </div>
+                        <div>
+                            <label for="cantidad-panceta">Panceta:</label>
+                            <input type="number" id="cantidad-panceta" min="0" value="0">
+                        </div>
+                    </div>
+                    <button id="armar">Armar hamburguesa</button>
+                </div>
+                <div id="combos">
+                    <h2>Combos</h2>
+                    <div class="combo">
+                        <h3 id="nombre-combos">Combo 1</h3>
+                        <p>Hamburguesa + Papas + Gaseosa</p>
+                        <button id="combo1">Añadir Combo #1</button>
+                    </div>
+                    <div class="combo">
+                        <h3 id="nombre-combos">Combo 2</h3>
+                        <p>Hamburguesa doble + Papas grandes + Gaseosa grande</p>
+                        <button id="combo2">Añadir Combo #2</button>
+                    </div>
+                </div>
+                <div class="main-right">
+                    <div id="pedido" style="display: none;">
+                        <h2>Tu pedido:</h2>
+                        <ul id="lista-pedido"></ul>
+                        <p class="total-precio">Total: $ <span id="total"></span></p>
+                        <button id="confirmar"><strong>Confirmar pedido</strong></button>
+                        <button id="eliminar-ultimo"> Eliminar Producto </button>
+                        <button id="limpiar-carrito"> Limpiar Carrito </button>
+                    </div>
+                </div>
+            </div>
+            <div class="top-hamburguesas">
+                <h3>Top 5 Hamburguesas más baratas</h3>
+                <ul id="burgerList"></ul>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 Ro Burguer. Todos los derechos reservados.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
